@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form</title>
+    <style>
+      .header {
+        font-weight: bolder;
+        color: blue;
+        text-align: center;
+      }
+      .form-container {
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 50px auto;
+        width: 300px;
+        padding: 20px;
+        background-color: #f9f9f9; /* Background color for the form container */
+      }
+
+      .form-container input[type="text"],
+      .form-container input[type="email"],
+      .form-container input[type="password"],
+      .form-container input[type="tel"],
+      .form-container input[type="submit"] {
+        margin-bottom: 10px;
+        padding: 10px;
+        width: calc(100% - 20px);
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .form-container input[type="submit"] {
+        background-color: #4caf50; /* Submit button background color */
+        color: white;
+        cursor: pointer;
+      }
+
+      .form-container label {
+        margin-left: 10px;
+        font-weight: bold;
+      }
+
+      /* Section with opacity */
+      .form-container .form-container_section {
+        opacity: 0.8;
+        background-color: #e74c3c; /* Section background color */
+        border-radius: 5px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">Registration form</h1>
+    <div class="form-container">
+      <form action="#">
+        <div class="form-container_section">
+          <label for="fullname">Full name</label><br />
+          <input type="text" name="fullname" id="fullname" required /><br />
+
+          <label for="email">E-mail</label><br />
+          <input type="email" name="email" id="email" required /> <br />
+
+          <label for="password">Password</label><br />
+          <input type="password" name="password" id="password" required /><br />
+
+          <label for="cnfpassword">Confirm Password</label><br />
+          <input
+            type="password"
+            name="cnfpassword"
+            id="cnfpassword"
+            required
+          /><br />
+        </div>
+
+        <div class="form-container_addtional">
+          <label for="phnumber">Phone number</label><br />
+          <input type="tel" name="phnumber" id="phnumber" required /><br />
+
+          <label for="address">Address</label><br />
+          <input type="text" name="address" id="address" /><br />
+
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

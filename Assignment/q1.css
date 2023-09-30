@@ -1,0 +1,15 @@
+/* External CSS */
+.section1 {
+    background-color: red;
+}
+
+.section3 {
+    font-weight: bolder;
+    background-color: rosybrown;
+    color: blue;
+}
+
+/* We targeted section1 with inline, internal, external CSS where
+   priority are as follows:
+   inline > internal > external
+*/

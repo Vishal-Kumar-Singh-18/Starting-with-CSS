@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM naming</title>
+    <style>
+      .header {
+        color: blue;
+        font-weight: bolder;
+      }
+      .section {
+        background-color: ghostwhite;
+      }
+      .section__heading {
+        font-weight: bold;
+        color: red;
+      }
+      .section__text {
+        font-style: italic;
+      }
+      /* Modifier */
+      .section--special .section__heading {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="header">Class selectors in HTML</h1>
+    <div class="section section1">
+      <h2 class="section__heading">This is the heading of first div</h2>
+      <p class="section__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, a,
+        dignissimos ut vero dolorem, doloribus odit explicabo eos nisi alias
+        iure commodi itaque maiores exercitationem hic quisquam non ea sit!
+      </p>
+    </div>
+    <div class="section section2 section--special">
+      <h2 class="section__heading">This is the heading of special div</h2>
+      <p class="section__text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, totam
+        expedita magni doloremque aut ex molestiae aperiam nobis sint eligendi
+        id alias, tenetur in quidem sequi velit saepe eius laudantium.
+      </p>
+    </div>
+    <div class="section section3">
+      <h2 class="section__heading">This is the heading of third div</h2>
+      <p class="section__text">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores minus
+        repellendus maxime cum, velit quidem aliquid assumenda eveniet
+        distinctio ut quas veniam laborum quos, ipsam, praesentium sed adipisci
+        quia eum.
+      </p>
+    </div>
+  </body>
+</html>
+
+<!-- Naming convention:
+
+1. Block:
+   - `.header`: Represents the main header of the document. It doesn't have any child elements, so it's a block.
+   - `.section`: Represents a section of content in the document. Each section contains heading and text elements.
+
+2. Element:
+   - `.section__heading`: Represents the heading element inside each section. It is a child element of the `.section` block. The double underscore (`__`) is used to denote an element of a block in BEM.
+   - `.section__text`: Represents the text element inside each section. Similar to `.section__heading`, it's an element of the `.section` block.
+
+3. Modifier:
+   - `.section--special`: Represents a modified version of the `.section` block. The double dash (`--`) is used to denote a modifier of a block in BEM. In this case, the modifier changes the style of the heading inside the `.section` block with the `.section--special` class.
+
+By following this naming convention:
+
+- Blocks are the standalone entities on a page.
+- Elements are parts of a block and have no standalone meaning.
+- Modifiers are flags on blocks or elements. They represent different states or versions of the blocks or elements.
+
+ -->
